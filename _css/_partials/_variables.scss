@@ -3,7 +3,8 @@ $font-head: 'Oxanium',
 sans-serif;
 $font-copy: 'Open Sans',
 sans-serif;
-$font-mono: 'Source Code Pro', monospace;
+$font-mono: 'Source Code Pro',
+monospace;
 
 //color variables
 $color-copy: #fff; //for main content text
@@ -17,6 +18,8 @@ $color-contrast: #000000; //for contrasting elements
 $color-food: #ccac55;
 $color-water: #5575cc;
 $color-fuel: #cc7155;
+$color-pos: #b0cc55;
+$color-neg: #cc7155;
 
 //z-indices
 $z-content: 2; //for main content
