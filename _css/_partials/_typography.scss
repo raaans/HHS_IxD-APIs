@@ -1,0 +1,111 @@
+//textual stuff
+h1 {
+    font-family: $font-head;
+    color: $color-copy;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 48px;
+    align-self: center;
+}
+
+h2,
+li.article {
+    text-align: left;
+    font-family: $font-head;
+    color: $color-copy;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+h3 {
+    font-family: $font-copy;
+    color: $color-copy;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+li h4 {
+    font-family: $font-copy;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: justify;
+    margin-bottom: 4px;
+    color: $color-copy;
+}
+
+p {
+    font-family: $font-copy;
+    color: $color-copy;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: justify;
+    margin-bottom: 16px;
+    color: $color-copy;
+}
+
+li {
+    font-family: $font-copy;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
+    margin-bottom: 8px;
+    color: $color-copy;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-family: $font-head;
+    font-size: 14px;
+    line-height: 14px;
+    color: $color-link;
+    border-bottom: 1px solid transparent;
+    transition: all ease-in-out 0.2s;
+}
+
+a:hover {
+    border-color: $color-link;
+}
+
+label {
+    font-family: $font-copy;
+    color: $color-copy;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+input {
+    font-family: $font-mono;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+input.submitButton {
+    font-family: $font-head;
+    font-weight: 800;
+}
+
+p span.em {
+    color: black;
+}
+
+span.required {
+    color: $color-contrast;
+}

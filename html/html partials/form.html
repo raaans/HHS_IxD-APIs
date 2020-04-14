@@ -1,0 +1,28 @@
+<form name="repairContactForm" action="contact-reparatie.php" method="post" onsubmit="return validateAll()" autocomplete="off">
+    <label for="form-first-name">Uw naam<span class="required"> *</span></label>
+    <input type="text" id="form-first-name" name="naam" onblur="return validateName()">
+
+    <label for="form-email">Uw e-mailadres<span class="required"> *</span></label>
+    <input type="text" id="form-email" name="email" onblur="return validateMail()">
+
+    <h3>Wat wilt u laten repareren?</h3>
+
+    <div id="repair-type">
+        <div>
+            <label for="form-brand">Merk <span class="required"> *</span></label>
+            <input type="text" id="form-brand" name="merk" onblur="return validateBrand()">
+        </div>
+
+        <div>
+            <label for="form-model">Model<span class="required"> *</span></label>
+            <input type="text" id="form-model" name="model" onblur="return validateModel()">
+        </div>
+    </div>
+
+    <h3>Wat is er mis met het product?</h3>
+
+    <label for="form-repair">Probleemomschrijving<span class="required"> *</span></label>
+    <textarea id="form-repair" name="omschrijving" onfocus="return validateDesc()"></textarea>
+
+    <button type="submit" id="send" name="submit" class="disabled" disabled>Verzenden</button>
+</form>

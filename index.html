@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+
+    <link href="_css/index/query.css" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" type='image/x-icon' href="icons/favico.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxanium|Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="_js/findSuitability.js" defer></script>
+
+    <title>LZ Suitability Check</title>
+</head>
+
+<body>
+    <header>
+        <h1><span id="head-mob">ITS Landing Zone | </span>Suitability Check</h1>
+    </header>
+
+    <section class="content">
+
+        <main>
+            <h2>Please specify LZ coordinates:</h2>
+            <section>
+
+                <input id="lzLat" placeholder="12.987" />
+                <input id="lzLon" placeholder="34.65" />
+
+                <button class="submitButton" id="suitSubmit">Find Suitability</button>
+
+            </section>
+        </main>
+
+        <section id="results">
+            <section class="result">
+                <div id="water-loading"></div>
+                <p id="water"></p>
+            </section>
+
+            <section class="result">
+                <div id=""></div>
+                <p id=""></p>
+            </section>
+            
+            <section class="result">
+                <div id=""></div>
+                <p id=""></p>
+            </section>
+            
+            <section class="result">
+                <div id=""></div>
+                <p id=""></p>
+            </section>
+            
+            <section class="result">
+                <div id=""></div>
+                <p id=""></p>
+            </section>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+@import url("dataPad_Small.css") (max-width: 800px);
+@import url("dataPad_Large.css") (min-width: 800px);
+@import url("mainScreen.css")(min-width: 1024px);

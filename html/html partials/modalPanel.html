@@ -1,0 +1,16 @@
+<div class="modal" id="updateFoodLog">
+    <div class="modal-content">
+
+        <span class="modal-close">&times;</span>
+
+        <form name="updateFood" onsubmit="return validateAll()" autocomplete="off">
+
+            <label for="food-value">New Log Entry<span class="required"> *</span></label>
+            <input type="text" id="food-value" name="logValue" onblur="return validateValue()">
+
+            <button type="submit" id="send" name="submit" class="disabled" disabled>Update Food Logs</button>
+
+        </form>
+
+    </div>
+</div>

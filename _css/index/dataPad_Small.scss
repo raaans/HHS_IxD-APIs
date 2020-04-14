@@ -1,0 +1,52 @@
+//mobile-only styling
+
+@import '../_partials/base.scss';
+
+header {
+    height: 6vh;
+    display: flex;
+    flex-direction: column;
+
+    #head-mob {
+        display: none;
+    }
+}
+
+section.content {
+    min-height: 70vh;
+    width: 96vw;
+    margin: 0.4vh 2vw 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    main {
+        width: 100%;
+        height: 70vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        @import '../_partials/dataPadSmall/projections-dpSmall';
+    }
+
+    section.modulesContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        @import '../_partials/dataPadSmall/module-dpSmall';
+    }
+}
+
+.modal {
+    .modal-content {
+        width: 30vw;
+        min-width: 420px;
+        min-height: 25vh;
+    }
+}

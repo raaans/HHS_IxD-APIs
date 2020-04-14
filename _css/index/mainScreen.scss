@@ -1,0 +1,16 @@
+//desktop-only styling
+
+@import '../_partials/base.scss';
+
+header {
+    height: 9vh;
+}
+
+section.content {
+    height: 90vh;
+    width: 92vw;
+    margin: 0.9vh 4vw 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -1,0 +1,54 @@
+section.content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: $z-content;
+
+    main {
+        width: 100%;
+        height: 60vh;
+        margin: 1vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        section {
+            margin-top: 16px;
+
+            input {
+                padding: 8px 10px;
+                border: 0px solid transparent;
+                border-radius: 1px;
+                font-family: monospace;
+            }
+
+            button.submitButton {
+                padding: 8px 12px;
+                margin: 0px 0px 0px 16px;
+                border: 0px solid transparent;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    section#results {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        
+        section.result {
+            @import 'loading';
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 16px 0px;
+        }
+    }
+}
