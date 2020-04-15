@@ -1,16 +1,11 @@
 # But why?
-This tool is meant to check if the LZ (specified in long & lat) is suitable for landing. It does so with a set of five requirements:
+This tool is meant to check if the LZ (specified in long & lat) is suitable for landing. 
 
 * First, it checks if the LZ is actually on land with an API request to onWater.io
-* If the LZ passes this check, the tool will ask mapbox if the terrain is suitable for landing (1) 
-* If the terrain is found to be suitable, more detailed checks are made: 
-* The tool checks with WeatherStack if the wind speed isn't too high (2) for landing 
-* and if the temperature isn't too cold or too hot (3)
-* If the LZ passes all these checks, the tool will report that it should be suitable for landing. It will provide a sattelite picture of the LZ so that the astronauts can do one last visual inspection of the area
+* The tool checks with WeatherStack if the wind speed isn't too high (1) for landing 
+* The tool will report that the LZ should be suitable for landing. It will provide a sattelite picture of the LZ so that the astronauts can do one last visual inspection of the area
 
-(1) Suitable terrain features are, for example:
-(2) A wind speed of 50km/h or more will result in a negative advice
-(3) A temperature of more than -10C and less than 40C is suitable
+(1) A wind speed of 50km/h or more will result in a negative advice
 
 # Structure
 CSS, HTML, JS, Images and Icons have their own separate folders
