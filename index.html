@@ -18,7 +18,7 @@
 
 <body>
     <header>
-        <h1><span id="head-mob">ITS Landing Zone | </span>Suitability Check</h1>
+        <h1 class="text-centered">LZ Suitability</h1>
     </header>
 
     <section class="content">
@@ -27,8 +27,15 @@
             <h2>Please specify LZ coordinates:</h2>
             <section>
 
-                <input id="lzLat" placeholder="12.987" />
-                <input id="lzLon" placeholder="34.65" />
+                <div class="llInput">
+                    <h3>Latitude:</h3>
+                    <input id="lzLat" placeholder="12.987" />
+                </div>
+
+                <div class="llInput">
+                    <h3>Longitude:</h3>
+                    <input id="lzLon" placeholder="34.65" />
+                </div>
 
                 <button class="submitButton" id="suitSubmit">Find Suitability</button>
 
@@ -48,8 +55,10 @@
 
             <section class="result">
                 <div id="picture-loading"></div>
-                <img id="picture" src="" />
+                <p id="picture-text"></p>
             </section>
+
+            <img id="picture" src="" />
         </section>
 
     </section>

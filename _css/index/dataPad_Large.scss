@@ -1,48 +1,29 @@
-//desktop-only styling
+//tablet-only styling
 
 @import '../_partials/base.scss';
 
-header {
-    height: 8vh;
-}
-
 section.content {
-    min-height: 90vh;
-    width: 92vw;
-    margin: 0.9vh 4vw 0px;
+    width: 100vw;
+    margin: 0.4vh 0px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
     main {
-        width: 92vw;
-        height: 64vh;
-        margin: 1vh;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
 
-        @import '../_partials/dataPadLarge/projections-dpLarge';
-    }
+        h2 {
+            margin-left: 8px;
+        }
 
-    section.modulesContainer {
-        width: 90vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+        section {
+            display: flex;
+            flex-direction: row !important;
 
-        @import '../_partials/dataPadLarge/module-dpLarge';
-    }
-}
-
-.modal {
-    .modal-content {
-        width: 30vw;
-        min-width: 420px;
-        min-height: 25vh;
+            button {
+                height: auto;
+                line-height: 20px;
+            }
+        }
     }
 }

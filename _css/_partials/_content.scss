@@ -1,5 +1,4 @@
 section.content {
-    width: 100vw;
     margin-top: 4vh;
     display: flex;
     flex-direction: column;
@@ -9,26 +8,35 @@ section.content {
 
     main {
         width: 100%;
-        margin: 4vh;
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
 
         section {
             margin-top: 16px;
 
-            input {
-                padding: 8px 10px;
-                border: 0px solid transparent;
-                border-radius: 1px;
-                font-family: monospace;
+            .llInput {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 8px;
+
+                input {
+                    padding: 8px 10px;
+                    margin: 4px 0px;
+                    border: 0px solid transparent;
+                    border-radius: 1px;
+                    font-family: monospace;
+                }
             }
+
 
             button.submitButton {
                 padding: 8px 12px;
-                margin: 0px 0px 0px 16px;
+                margin: 8px 0px 0px 8px;
                 border: 0px solid transparent;
                 border-radius: 4px;
             }
@@ -40,9 +48,7 @@ section.content {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        border: 1px solid $color-sep;
-        border-radius: 8px;
-        width: 60vw;
+        margin-top: 16px;
 
         section.result {
             @import 'loading';
@@ -51,7 +57,7 @@ section.content {
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            margin: 16px 0px;
+            margin: 8px 0px 8px -28px;
 
             div {
                 height: 28px;
@@ -73,11 +79,13 @@ section.content {
                 margin: 0px 0px 0px 8px;
                 font-weight: bold;
             }
+        }
 
-            img {
-                border: 0px solid transparent;
-                border-radius: 16px;
-            }
+        #picture {
+            border: 0px solid transparent;
+            border-radius: 16px;
+            max-width: 95vw;
+            margin-bottom: 32px;
         }
     }
 }

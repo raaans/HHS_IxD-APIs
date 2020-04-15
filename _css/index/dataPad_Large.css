@@ -38,8 +38,8 @@ body h3 {
   color: #fff;
   font-weight: 700;
   font-style: normal;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 18px;
 }
 body li h4 {
   font-family: "Open Sans", sans-serif;
@@ -138,7 +138,6 @@ body header a:hover {
   border-bottom: 1px solid transparent;
 }
 body section.content {
-  width: 100vw;
   margin-top: 4vh;
   display: flex;
   flex-direction: column;
@@ -148,25 +147,32 @@ body section.content {
 }
 body section.content main {
   width: 100%;
-  margin: 4vh;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 body section.content main section {
   margin-top: 16px;
 }
-body section.content main section input {
+body section.content main section .llInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 8px;
+}
+body section.content main section .llInput input {
   padding: 8px 10px;
+  margin: 4px 0px;
   border: 0px solid transparent;
   border-radius: 1px;
   font-family: monospace;
 }
 body section.content main section button.submitButton {
   padding: 8px 12px;
-  margin: 0px 0px 0px 16px;
+  margin: 8px 0px 0px 8px;
   border: 0px solid transparent;
   border-radius: 4px;
 }
@@ -175,16 +181,14 @@ body section.content section#results {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border: 1px solid #090B0C;
-  border-radius: 8px;
-  width: 60vw;
+  margin-top: 16px;
 }
 body section.content section#results section.result {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 16px 0px;
+  margin: 8px 0px 8px -28px;
 }
 body section.content section#results section.result .loading-icon {
   display: inline-block;
@@ -227,9 +231,11 @@ body section.content section#results section.result p {
   margin: 0px 0px 0px 8px;
   font-weight: bold;
 }
-body section.content section#results section.result img {
+body section.content section#results #picture {
   border: 0px solid transparent;
   border-radius: 16px;
+  max-width: 95vw;
+  margin-bottom: 32px;
 }
 body header {
   z-index: 3;
@@ -238,129 +244,24 @@ body section.content {
   z-index: 2;
 }
 
-header {
-  height: 8vh;
-}
-
 section.content {
-  min-height: 90vh;
-  width: 92vw;
-  margin: 0.9vh 4vw 0px;
+  width: 100vw;
+  margin: 0.4vh 0px 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-section.content main {
-  width: 92vw;
-  height: 64vh;
-  margin: 1vh;
-  position: relative;
+section.content main h2 {
+  margin-left: 8px;
+}
+section.content main section {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: row !important;
 }
-section.content main canvas {
-  width: 96% !important;
-  height: 96% !important;
-  margin: 2%;
-}
-section.content section.modulesContainer {
-  width: 90vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-section.content section.modulesContainer section.module {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 140px;
-  margin: 16px;
-  border-radius: 4px;
-  box-shadow: 2px 2px 4px 2px #131719;
-}
-section.content section.modulesContainer section.module h2 {
-  width: 100%;
-  border-bottom: 1px solid #fff;
-  text-align: center;
-}
-section.content section.modulesContainer section.module input {
-  padding: 8px 10px;
-  border: 0px solid transparent;
-  border-radius: 4px;
-  box-shadow: 2px 2px 6px #666 inset;
-}
-section.content section.modulesContainer section.module input[type=number]::-webkit-inner-spin-button,
-section.content section.modulesContainer section.module input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-section.content section.modulesContainer section.module input[type=number] {
-  -moz-appearance: textfield;
-}
-section.content section.modulesContainer section.module div.drillDownButtons {
-  margin: 4px 0px;
-}
-section.content section.modulesContainer section.module div.drillDownButtons button {
-  padding: 8px 10px;
-  margin: 2px 4px;
-  border: 0px solid;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
-  color: white;
-}
-section.content section.modulesContainer section.module--food {
-  border: 2px solid #ccac55;
-}
-section.content section.modulesContainer section.module--food button {
-  background-color: #ccac55;
-}
-section.content section.modulesContainer section.module--water {
-  border: 2px solid #5575cc;
-}
-section.content section.modulesContainer section.module--water button {
-  background-color: #5575cc;
-}
-section.content section.modulesContainer section.module--fuel {
-  border: 2px solid #cc7155;
-}
-section.content section.modulesContainer section.module--fuel button {
-  background-color: #cc7155;
-}
-section.content section.modulesContainer section.module {
-  min-width: 220px;
-  width: 16vw;
-  height: 20vh;
-  max-height: 160px;
-  margin: 24px 0px;
-}
-section.content section.modulesContainer section.module h2 {
-  margin-top: 2px;
-  padding-bottom: 3px;
-}
-section.content section.modulesContainer section.module input {
-  padding: 8px 10px;
-}
-section.content section.modulesContainer section.module div.drillDownButtons {
-  margin-bottom: 8px;
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-section.content section.modulesContainer section.module div.drillDownButtons button {
-  min-width: 57px;
-}
-
-.modal .modal-content {
-  width: 30vw;
-  min-width: 420px;
-  min-height: 25vh;
+section.content main section button {
+  height: auto;
+  line-height: 20px;
 }
 
 /*# sourceMappingURL=dataPad_Large.css.map */

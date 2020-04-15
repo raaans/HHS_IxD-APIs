@@ -1,17 +1,20 @@
 //call check functions when submit button is clicked
 $("#suitSubmit").click(function () {
+    var lzLat = $("#lzLat").val();
+    var lzLon = $("#lzLon").val();
 
-    //function that checks if the location is on water via onwater.io
-    $.fn.checkIfWater();
-    //function that checks if the wind speed isn't too high via weatherstack
-    $.fn.checkWind();
+    if (lzLat != '' && lzLon != '') {
+        //function that checks if the location is on water via onwater.io
+        $.fn.checkIfWater();
+        //function that checks if the wind speed isn't too high via weatherstack
+        $.fn.checkWind();
 
-    //function that finds a sattelite image of the LZ via mapbox
-    $.fn.checkTerrain();
-
-    //clear input fields
-    $("#lzLat").val('');
-    $("#lzLon").val('');
+        //function that finds a sattelite image of the LZ via mapbox
+        $.fn.checkTerrain();
+    } else {
+        $("#water").addClass("notSuitable");
+        $("#water").html("Please enter Lat and/or Lon values")
+    }
 });
 
 
@@ -30,7 +33,7 @@ $.fn.checkIfWater = function () {
 
     //display loading icon when function starts
     loadingIcon.addClass("loading-icon");
-    suitText.html("checking");
+    suitText.html("Checking for Water");
 
     //fetch data from the API
     fetch(onWaterRequest).then(function (response) {
@@ -39,10 +42,12 @@ $.fn.checkIfWater = function () {
             //remove the loading icon when check is done
             loadingIcon.removeClass("loading-icon");
             //and display some red text
+            suitText.removeClass("suitable")
             suitText.addClass("notSuitable");
             suitText.html("\u2A2F This location is on water");
         } else {
             loadingIcon.removeClass("loading-icon");
+            suitText.removeClass("notSuitable")
             loadingIcon.addClass("suitable");
             //and display some green text
             suitText.addClass("suitable");
@@ -66,7 +71,7 @@ $.fn.checkWind = function () {
 
     //display loading icon when function starts
     loadingIcon.addClass("loading-icon");
-    suitText.html("checking");
+    suitText.html("Finding Wind Speed");
 
     //fetch data from the API
     fetch(wStackRequest).then(function (response) {
@@ -77,10 +82,12 @@ $.fn.checkWind = function () {
             //remove the loading icon when check is done
             loadingIcon.removeClass("loading-icon");
             //and display some red text
+            suitText.removeClass("suitable")
             suitText.addClass("notSuitable");
             suitText.html("\u2A2F Wind speed is too high for landing");
         } else {
             loadingIcon.removeClass("loading-icon");
+            suitText.removeClass("notSuitable")
             loadingIcon.addClass("suitable");
             //and display some green text
             suitText.addClass("suitable");
@@ -98,9 +105,9 @@ $.fn.checkTerrain = function () {
     var mapBoxRequest = 'https://api.mapbox.com/styles/v1/mapbox/satellite-v9/static/' + lzLat + ',' + lzLon + ',15,0/500x400?access_token=pk.eyJ1Ijoic3RhY2stc25lcnMiLCJhIjoiY2s4enk5emlhMDBpZjNpbnozbjhkYWUwbiJ9.e7lGfppTMSgOEHi4DRSIFg';
 
     //find the location for the loading icon
-    var loadingIcon = $("#wind-loading");
+    var loadingIcon = $("#picture-loading");
     //find the location for the text
-    var suitText = $("#wind");
+    var suitText = $("#picture-text");
 
     //display loading icon when function starts
     loadingIcon.addClass("loading-icon");
@@ -108,5 +115,10 @@ $.fn.checkTerrain = function () {
 
     //place sattelite image in #picture
     $('#picture').attr("src", mapBoxRequest);
-    loadingIcon.removeClass("loading-icon");
+
+    //change text after 1 sec
+    setTimeout(function () {
+        loadingIcon.removeClass("loading-icon");
+        suitText.html("Check Sattelite Image:");
+    }, 500);
 };
