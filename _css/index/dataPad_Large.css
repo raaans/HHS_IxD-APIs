@@ -227,6 +227,10 @@ body section.content section#results section.result p {
   margin: 0px 0px 0px 8px;
   font-weight: bold;
 }
+body section.content section#results section.result img {
+  border: 0px solid transparent;
+  border-radius: 16px;
+}
 body header {
   z-index: 3;
 }
