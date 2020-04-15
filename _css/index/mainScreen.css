@@ -245,9 +245,19 @@ body section.content {
 }
 
 section.content {
-  height: 90vh;
-  width: 92vw;
-  margin: 0.9vh 4vw 0px;
+  width: 100vw;
+  margin: 0.4vh 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+section.content main h2 {
+  margin-left: 8px;
+}
+section.content main section button {
+  margin-top: 30px !important;
+  height: 32px;
 }
 
 /*# sourceMappingURL=mainScreen.css.map */

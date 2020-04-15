@@ -1,4 +1,4 @@
-//tablet-only styling
+//desktop-only styling
 
 @import '../_partials/base.scss';
 
@@ -19,10 +19,11 @@ section.content {
         section {
             display: flex;
             flex-direction: row !important;
+            align-items: flex-start;
 
             button {
-                height: auto;
-                line-height: 20px;
+                margin-top: 30px !important;
+                height: 32px;
             }
         }
     }

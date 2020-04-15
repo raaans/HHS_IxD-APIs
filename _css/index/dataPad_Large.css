@@ -258,10 +258,11 @@ section.content main h2 {
 section.content main section {
   display: flex;
   flex-direction: row !important;
+  align-items: flex-start;
 }
 section.content main section button {
-  height: auto;
-  line-height: 20px;
+  margin-top: 30px !important;
+  height: 32px;
 }
 
 /*# sourceMappingURL=dataPad_Large.css.map */
